@@ -1,0 +1,145 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+    <title>Learning CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box;}
+
+            *, *:before, *:after{
+           -webkit-box-sizing:inherit;
+            -moz-box-sizing:inherit;
+            box-sizing:inherit;}
+
+            img {
+                max-width: 100%;
+                height:auto;
+                padding: 20px;
+                }
+
+
+
+            }
+
+.container{
+           display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 1200px;
+    margin:0 auto;
+    grid-gap: 1em;
+    grid-template-areas:
+        "search"
+        "header"
+        "cart"
+        "nav"
+        "policy"
+        "footer"
+        ;
+            }
+
+            header{
+                grid-area:header;
+                padding-bottom: 50px;
+            }
+            .search{
+                grid-area: search;
+                padding-bottom: 50px;
+            }
+            .cart{
+                grid-area: cart;
+                padding-bottom: 50px;
+            }
+
+            nav{
+                grid-area: nav;
+                background-color: lightcyan;
+            }
+
+            .policy{
+                grid-area: policy;
+            }
+
+        footer{
+                grid-area: footer;
+            }
+            .inlineList li {
+                display: inline;
+                margin-left: 137px;
+                }
+            h3{
+                color:black;
+            }
+            h1{
+                color: black
+            }
+
+  @media only screen and (min-width:620px){
+   .container{
+           display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    grid-template-areas:
+        "search search header header cart cart"
+        "nav nav nav nav nav nav"
+     "policy policy policy policy policy policy"
+        "footer footer footer footer footer footer"
+        ;
+            }
+ @media only screen and (min-width:900px){
+     .container{
+     display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    grid-template-areas:
+        "search search search search header header header header cart cart cart cart"
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "policy policy policy policy policy policy policy policy policy policy policy policy"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+
+        ;
+            }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+       <div> <a href="index.html"><img src="images/inmotionlogo.png" alt="Logo"></a> </div></header>
+        <div class="search">
+        <img src="images/search.png" alt="Search"></div>
+        <div class="cart">
+         <img src="images/cart.png" alt="Cart"></div>
+<nav>
+ <h3>
+    <ul class="inlineList">
+    <li><a href="product1.html">Women</a></li>
+    <li><a href="product2.html">Men</a></li>
+    <li><a>Girls</a></li>
+    <li><a>Collection</a></li>
+        <li><a href="policy.html">Policy</a></li>
+      </ul></h3></nav>
+
+        <div class="policy">
+        <h1>Privacy Policy</h1>
+        <p>Last updated:11/08/2018</p>
+            <p>InMotion Athletics operates http://www.kerryluiso.com/retail. This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site. We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information in accordance with this policy.</p>
+        <P>Notice</P>
+            <P>While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to your name ("Personal Information"). We also ask for an email for promotional events. Like many site operators, we collect information that your browser sends whenever you visit our Site ("Log Data"). This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages and other statistics. We may use your Personal Information to contact you with newsletters, marketing or promotional materials and other information.</P>
+            <P>Cookies</P>
+            <p>Cookies are files with small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a web site and stored on your computer's hard drive. Like many sites, we use "cookies" to collect information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Site. If you opt out of cookies none of your personal information will be collected.  </p>
+            <p>Security</p>
+            <p>The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.</p>
+            <p>Changes To This Privacy Policy </p>
+            <p>This Privacy Policy is effective as of 11/12/18 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. </p>
+            <p>Contact Us</p>
+            <p>If you have any questions about this Privacy Policy, please contact us at 540-363-8846. </p>
+</div>
+        <footer><img src="images/footer.png" alt="footer"></footer>
+     </div>
+</body>
+</html>

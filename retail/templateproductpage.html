@@ -1,0 +1,190 @@
+<!DOCTYPE>
+<html lang="en-US">
+    <head>
+    <title>Learning CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html {
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box;}
+
+            *, *:before, *:after{
+           -webkit-box-sizing:inherit;
+            -moz-box-sizing:inherit;
+            box-sizing:inherit;}
+
+            img {
+                max-width: 100%;
+                height:auto;
+                padding: 20px;
+                }
+
+            .container > * {
+                background-color: #eee;
+                padding: 1em;
+            }
+.container > *:nth-child(odd) {
+            background-color:#ddd;
+                 }
+
+            }
+
+.container{
+           display:grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 1200px;
+    margin:0 auto;
+    grid-gap: 1em;
+    grid-template-areas:
+        "search"
+        "header"
+        "cart"
+        "nav"
+        "img"
+        "product1"
+        "product2"
+        "product3"
+        "product4"
+        "product5"
+        "product6"
+        "product7"
+        "product8"
+        "product9"
+        "footer"
+        ;
+            }
+
+            header{
+                grid-area:header;
+                padding-bottom: 50px;
+            }
+            .search{
+                grid-area: search;
+                padding-bottom: 50px;
+            }
+            .cart{
+                grid-area: cart;
+                padding-bottom: 50px;
+            }
+
+            nav{
+                grid-area: nav;
+                background-color: lightcyan;
+            }
+            .img{
+                grid-area: img;
+                padding: 0px;
+
+            }
+
+            .product1{
+                grid-area: product1;
+            }
+            .product2{
+                grid-area: product2;
+            }
+            .product3{
+                grid-area: product3;
+            }
+            .product4{
+                grid-area: product4;
+            }
+            .product5{
+                grid-area: product5;
+            }
+            .product6{
+                grid-area: product6;
+            }
+            .product7{
+                grid-area: product7;
+            }
+            .product8{
+                grid-area: product8;
+            }
+            .product9{
+                grid-area: product9;
+            }
+
+            footer{
+                grid-area: footer;
+            }
+            .inlineList li {
+                display: inline;
+                margin-left: 137px;
+                }
+            h3{
+                color:black;
+            }
+            h1{
+                color: black
+            }
+  @media only screen and (min-width:620px){
+   .container{
+           display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    grid-template-areas:
+        "search search header header cart cart"
+        "nav nav nav nav nav nav"
+     "img img img img img img"
+        "about about about new new new"
+         "product1 product1 product2 product2 product3 product3"
+         "product4 product4 product5 product5 product6 product6"
+         "product7 product7 product8 product8 product9 product9"
+        "footer footer footer footer footer footer"
+        ;
+            }
+ @media only screen and (min-width:900px){
+     .container{
+     display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1em;
+    grid-template-areas:
+        "search search search search header header header header cart cart cart cart"
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "img img img img img img img img img img img img"
+        "product1 product1 product1 product1 product2 product2 product2 product2 product3 product3 product3 product3"
+        "product4 product4 product4 product4 product5 product5 product5 product5 product6 product6 product6 product6"
+        "product7 product7 product7 product7 product8 product8 product8 product8 product9 product9 product9 product9"
+        "footer footer footer footer footer footer footer footer footer footer footer footer"
+
+        ;
+            }
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <img src="images/inmotionlogo.png" alt="Logo"></header>
+        <div class="search">
+        <img src="images/search.png" alt="Search"></div>
+        <div class="cart">
+         <img src="images/cart.png" alt="Cart"></div>
+<nav>
+ <h3>
+    <ul class="inlineList">
+    <li><a href="downtown.html">Women</a></li>
+    <li><a href="jmu.html">Men</a></li>
+    <li><a>Girls</a></li>
+    <li><a>Collection</a></li>
+        <li><a href="photos.html">Policy</a></li>
+      </ul></h3></nav>
+
+        <div class="img">This is my img</div>
+        <div class="product1">This is my product1.</div>
+        <div class="product2">This is my product2.</div>
+        <div class="product3">This is my product3.</div>
+        <div class="product4">This is my product4.</div>
+        <div class="product5">This is my product5.</div>
+        <div class="product6">This is my product6.</div>
+        <div class="product7">This is my product7.</div>
+        <div class="product8">This is my product8.</div>
+        <div class="product9">This is my product9.</div>
+        <footer>This is my footer.</footer>
+     </div>
+</body>
+</html>
